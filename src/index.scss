@@ -1,0 +1,38 @@
+@import './themes/dark-theme.scss';
+@import './themes/light-theme.scss';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto','Open Sans',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hide {
+  display: none !important;
+}
+
+.animated-progress-bar-test {
+  animation: progressBar 2s infinite;
+}
+
+
+.animated-progress-bar {
+  animation-name: progressBar;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes progressBar {
+  0% {
+    //background: linear-gradient(to right, #fff 0%, #fff 0%, transparent 0%);
+    right: 100%;
+  }
+  100% {
+    //background: linear-gradient(to right, #fff 0%, #fff 100%, transparent 100%);
+    right: 0;
+  }
+}
